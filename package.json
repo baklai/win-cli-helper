@@ -1,0 +1,28 @@
+{
+  "name": "win-cli-helper",
+  "version": "1.0.0",
+  "description": "Windows сommand line interpreter helper.",
+  "author": "Dmitrii Baklai",
+  "private": true,
+  "scripts": {
+    "dev": "nuxt",
+    "build": "nuxt build",
+    "start": "nuxt start",
+    "generate": "nuxt generate",
+    "deploy": "push-dir --dir=dist --branch=gh-pages --cleanup"
+  },
+  "dependencies": {
+    "@nuxt/content": "^1.11.1",
+    "@nuxtjs/meta": "^3.0.0-beta.16",
+    "@nuxtjs/pwa": "^3.3.4",
+    "core-js": "^3.8.2",
+    "nuxt": "^2.14.12",
+    "prism-themes": "^1.5.0",
+    "v-clipboard": "^2.2.3",
+    "vue-toasted": "^1.1.28"
+  },
+  "devDependencies": {
+    "@nuxtjs/vuetify": "^1.11.2",
+    "push-dir": "^0.4.1"
+  }
+}
