@@ -1,7 +1,5 @@
 <template>
   <v-app>
-    <app-banner />
-
     <v-navigation-drawer v-model="drawer" app absolute temporary>
       <v-list>
         <v-list-item two-line class="px-2">
@@ -50,25 +48,182 @@
       </template>
     </v-navigation-drawer>
 
-    <v-app-bar app clipped-left flat class="mx-auto" max-width="500">
-      <v-toolbar-title class="d-inline">
-        <v-avatar left tile size="32">
-          <img src="@/static/icon.svg" alt="logo" />
-        </v-avatar>
-        <p class="d-inline">Cyt</p>
-        <p class="d-inline">To</p>
-        <p class="d-inline">Lat</p>
+    <v-app-bar app fixed outlined flat clipped-left>
+      <v-container class="grey lighten-5">
+        <!-- Stack the columns on mobile by making one full-width and the other half-width -->
+        <v-row>
+          <v-col cols="12" md="8">
+            <v-card class="pa-2" outlined tile>
+              .col-12 .col-md-8
+            </v-card>
+          </v-col>
+          <v-col cols="6" md="4">
+            <v-card class="pa-2" outlined tile>
+              .col-6 .col-md-4
+            </v-card>
+          </v-col>
+        </v-row>
+
+        <!-- Columns start at 50% wide on mobile and bump up to 33.3% wide on desktop -->
+        <v-row>
+          <v-col v-for="n in 3" :key="n" cols="6" md="4">
+            <v-card class="pa-2" outlined tile>
+              .col-6 .col-md-4
+            </v-card>
+          </v-col>
+        </v-row>
+
+        <!-- Columns are always 50% wide, on mobile and desktop -->
+        <v-row>
+          <v-col v-for="n in 2" :key="n" cols="6">
+            <v-card class="pa-2" outlined tile>
+              .col-6
+            </v-card>
+          </v-col>
+        </v-row>
+      </v-container>
+
+      <!-- <v-container fluid>
+        <v-row justify="center" align="center">
+          <v-toolbar-items>
+            <v-col cols="2">
+              <v-toolbar-title class="d-inline">
+                <v-avatar left tile size="32">
+                  <img src="@/static/icon.png" alt="logo" />
+                </v-avatar>
+                <p class="d-inline">Win</p>
+                <p class="d-inline">CLI</p>
+                <p class="d-inline">Helper</p>
+              </v-toolbar-title>
+            </v-col>
+          </v-toolbar-items>
+          <v-spacer></v-spacer>
+          <v-toolbar-items>
+            <v-col cols="8">
+              <v-text-field
+                dense
+                flat
+                hide-details
+                solo-inverted
+              ></v-text-field>
+            </v-col>
+          </v-toolbar-items>
+          <v-spacer></v-spacer>
+          <v-toolbar-items>
+            <v-col cols="1">
+              <v-btn icon @click="toggle_dark_mode">
+                <v-icon>mdi-theme-light-dark</v-icon>
+              </v-btn>
+            </v-col>
+            <v-col cols="1">
+              <v-app-bar-nav-icon
+                @click.stop="drawer = !drawer"
+              ></v-app-bar-nav-icon>
+            </v-col>
+          </v-toolbar-items>
+        </v-row>
+      </v-container> -->
+
+      <!-- <v-container fill-height>
+        <v-row justify="center">
+          <v-col cols="12" sm="2" class="hidden-sm-and-down">
+            <v-toolbar-title class="d-inline">
+              <v-responsive>
+                <v-avatar left tile size="32">
+                  <img src="@/static/icon.png" alt="logo" />
+                </v-avatar>
+                <p class="d-inline">Win</p>
+                <p class="d-inline">CLI</p>
+                <p class="d-inline">Helper</p>
+              </v-responsive>
+            </v-toolbar-title>
+          </v-col>
+
+          <v-col cols="12" sm="5">
+            <v-responsive class="d-none d-sm-flex">
+              <v-text-field
+                dense
+                flat
+                hide-details
+                solo-inverted
+              ></v-text-field>
+            </v-responsive>
+          </v-col>
+
+          <v-col cols="12" sm="2">
+            <v-responsive class="d-none d-sm-flex">
+              <v-btn icon @click="toggle_dark_mode">
+                <v-icon>mdi-theme-light-dark</v-icon>
+              </v-btn>
+              <v-app-bar-nav-icon
+                @click.stop="drawer = !drawer"
+              ></v-app-bar-nav-icon>
+            </v-responsive>
+          </v-col>
+        </v-row>
+      </v-container> -->
+
+      <!-- <v-toolbar-title class="d-inline">
+        <v-responsive>
+          <v-avatar left tile size="32">
+            <img src="@/static/icon.png" alt="logo" />
+          </v-avatar>
+          <p class="d-inline">Win</p>
+          <p class="d-inline">CLI</p>
+          <p class="d-inline">Helper</p>
+        </v-responsive>
       </v-toolbar-title>
+      <v-spacer></v-spacer>
+      <v-responsive class="d-none d-sm-flex">
+        <v-text-field
+          dense
+          flat
+          hide-details
+          rounded
+          solo-inverted
+        ></v-text-field>
+      </v-responsive>
       <v-spacer></v-spacer>
       <v-btn icon @click="toggle_dark_mode">
         <v-icon>mdi-theme-light-dark</v-icon>
       </v-btn>
-      <v-app-bar-nav-icon @click.stop="drawer = !drawer"></v-app-bar-nav-icon>
+      <v-app-bar-nav-icon @click.stop="drawer = !drawer"></v-app-bar-nav-icon> -->
     </v-app-bar>
 
-    <v-main max-width="500">
+    <v-main>
       <v-container fill-height>
-        <nuxt />
+        <v-row justify="center">
+          <v-col cols="12" sm="2" class="hidden-sm-and-down">
+            <v-sheet min-height="100vh">
+              Lorem ipsum dolor sit, amet consectetur adipisicing elit. Natus,
+              quod.
+            </v-sheet>
+          </v-col>
+          <v-divider vertical class="hidden-sm-and-down"></v-divider>
+          <v-col cols="12" sm="5">
+            <v-responsive class="d-flex d-sm-none">
+              <v-text-field
+                dense
+                flat
+                hide-details
+                rounded
+                solo-inverted
+              ></v-text-field>
+            </v-responsive>
+
+            <v-sheet min-height="100vh">
+              <nuxt />
+            </v-sheet>
+          </v-col>
+          <v-divider vertical class="hidden-sm-and-down"></v-divider>
+          <v-col cols="12" sm="2" class="hidden-sm-and-down">
+            <v-sheet min-height="100vh">
+              Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eum ipsa
+              porro doloribus tempore optio dignissimos similique placeat, iusto
+              beatae facere!
+            </v-sheet>
+          </v-col>
+        </v-row>
       </v-container>
     </v-main>
 
@@ -102,17 +257,11 @@
 </template>
 
 <script>
-import AppBanner from "@/components/Banner";
-
 export default {
-  components: {
-    AppBanner,
-  },
-  data() {
-    return {
-      drawer: false,
-    };
-  },
+  data: () => ({
+    drawer: false,
+    links: ["Dashboard", "Messages", "Profile", "Updates"],
+  }),
   mounted() {
     const theme = localStorage.getItem("dark_theme");
     if (theme) {
@@ -147,11 +296,6 @@ export default {
     info: function() {
       this.$router.push(`/about`);
     },
-
-    exit: function() {
-      this.$store.commit("appSignout");
-    },
-
     toggle_dark_mode: function() {
       this.$vuetify.theme.dark = !this.$vuetify.theme.dark;
       localStorage.setItem("dark_theme", this.$vuetify.theme.dark.toString());

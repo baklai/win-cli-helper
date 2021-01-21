@@ -23,7 +23,7 @@
 
 <script>
 export default {
-  layout: "test",
+  layout: "default",
   async asyncData({ $content, params }) {
     const article = await $content("articles", params.id).fetch();
     return { article };

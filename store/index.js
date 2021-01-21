@@ -24,16 +24,6 @@ export const state = () => ({
 
 export const actions = {};
 
-export const mutations = {
-  appSignout() {
-    if (navigator.app) {
-      navigator.app.exitApp();
-    } else if (navigator.device) {
-      navigator.device.exitApp();
-    } else {
-      window.close();
-    }
-  },
-};
+export const mutations = {};
 
 export const getters = {};
