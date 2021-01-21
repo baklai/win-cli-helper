@@ -48,133 +48,117 @@
       </template>
     </v-navigation-drawer>
 
-    <v-app-bar app fixed outlined flat clipped-left>
-      <v-container class="grey lighten-5">
-        <!-- Stack the columns on mobile by making one full-width and the other half-width -->
-        <v-row>
-          <v-col cols="12" md="8">
-            <v-card class="pa-2" outlined tile>
-              .col-12 .col-md-8
-            </v-card>
-          </v-col>
-          <v-col cols="6" md="4">
-            <v-card class="pa-2" outlined tile>
-              .col-6 .col-md-4
-            </v-card>
-          </v-col>
-        </v-row>
+    <!-- <v-app-bar app fixed outlined flat clipped-left>
+      <v-row>
+        <v-col cols="4" class="d-flex justify-start" align-self="center">
+          <v-toolbar-title>
+            <v-avatar left tile size="32">
+              <img src="@/static/icon.png" alt="logo" />
+            </v-avatar>
+            <p class="d-inline">Win</p>
+            <p class="d-inline">CLI</p>
+            <p class="d-inline">Helper</p>
+          </v-toolbar-title>
+        </v-col>
+        <v-spacer></v-spacer>
+        <v-col class="d-flex justify-space-around" align-self="center">
+          <v-toolbar-title>
+            <v-text-field
+              dense
+              flat
+              hide-details
+              rounded
+              solo-inverted
+              append-icon="mdi-magnify"
+            ></v-text-field>
+          </v-toolbar-title>
+        </v-col>
+        <v-spacer></v-spacer>
+        <v-col cols="4" class="d-flex justify-end" align-self="center">
+          <v-toolbar-title>
+            <v-btn icon @click="toggle_dark_mode">
+              <v-icon>mdi-theme-light-dark</v-icon>
+            </v-btn>
+            <v-app-bar-nav-icon
+              @click.stop="drawer = !drawer"
+            ></v-app-bar-nav-icon>
+          </v-toolbar-title>
+        </v-col>
+      </v-row>
+    </v-app-bar> -->
 
-        <!-- Columns start at 50% wide on mobile and bump up to 33.3% wide on desktop -->
-        <v-row>
-          <v-col v-for="n in 3" :key="n" cols="6" md="4">
-            <v-card class="pa-2" outlined tile>
-              .col-6 .col-md-4
-            </v-card>
-          </v-col>
-        </v-row>
-
-        <!-- Columns are always 50% wide, on mobile and desktop -->
-        <v-row>
-          <v-col v-for="n in 2" :key="n" cols="6">
-            <v-card class="pa-2" outlined tile>
-              .col-6
-            </v-card>
-          </v-col>
-        </v-row>
-      </v-container>
-
-      <!-- <v-container fluid>
-        <v-row justify="center" align="center">
-          <v-toolbar-items>
-            <v-col cols="2">
-              <v-toolbar-title class="d-inline">
-                <v-avatar left tile size="32">
-                  <img src="@/static/icon.png" alt="logo" />
-                </v-avatar>
-                <p class="d-inline">Win</p>
-                <p class="d-inline">CLI</p>
-                <p class="d-inline">Helper</p>
-              </v-toolbar-title>
-            </v-col>
-          </v-toolbar-items>
-          <v-spacer></v-spacer>
-          <v-toolbar-items>
-            <v-col cols="8">
-              <v-text-field
-                dense
-                flat
-                hide-details
-                solo-inverted
-              ></v-text-field>
-            </v-col>
-          </v-toolbar-items>
-          <v-spacer></v-spacer>
-          <v-toolbar-items>
-            <v-col cols="1">
-              <v-btn icon @click="toggle_dark_mode">
-                <v-icon>mdi-theme-light-dark</v-icon>
-              </v-btn>
-            </v-col>
-            <v-col cols="1">
-              <v-app-bar-nav-icon
-                @click.stop="drawer = !drawer"
-              ></v-app-bar-nav-icon>
-            </v-col>
-          </v-toolbar-items>
-        </v-row>
-      </v-container> -->
-
-      <!-- <v-container fill-height>
-        <v-row justify="center">
-          <v-col cols="12" sm="2" class="hidden-sm-and-down">
-            <v-toolbar-title class="d-inline">
-              <v-responsive>
-                <v-avatar left tile size="32">
-                  <img src="@/static/icon.png" alt="logo" />
-                </v-avatar>
-                <p class="d-inline">Win</p>
-                <p class="d-inline">CLI</p>
-                <p class="d-inline">Helper</p>
-              </v-responsive>
-            </v-toolbar-title>
-          </v-col>
-
-          <v-col cols="12" sm="5">
-            <v-responsive class="d-none d-sm-flex">
-              <v-text-field
-                dense
-                flat
-                hide-details
-                solo-inverted
-              ></v-text-field>
-            </v-responsive>
-          </v-col>
-
-          <v-col cols="12" sm="2">
-            <v-responsive class="d-none d-sm-flex">
-              <v-btn icon @click="toggle_dark_mode">
-                <v-icon>mdi-theme-light-dark</v-icon>
-              </v-btn>
-              <v-app-bar-nav-icon
-                @click.stop="drawer = !drawer"
-              ></v-app-bar-nav-icon>
-            </v-responsive>
-          </v-col>
-        </v-row>
-      </v-container> -->
-
-      <!-- <v-toolbar-title class="d-inline">
-        <v-responsive>
-          <v-avatar left tile size="32">
-            <img src="@/static/icon.png" alt="logo" />
-          </v-avatar>
-          <p class="d-inline">Win</p>
-          <p class="d-inline">CLI</p>
-          <p class="d-inline">Helper</p>
-        </v-responsive>
+    <v-app-bar app fixed outlined flat clipped-left clipped-right>
+      <!-- <v-toolbar-title>
+        <v-avatar left tile size="32">
+          <img src="@/static/icon.png" alt="logo" />
+        </v-avatar>
+        <p class="d-inline">Win</p>
+        <p class="d-inline">CLI</p>
+        <p class="d-inline">Helper</p>
       </v-toolbar-title>
       <v-spacer></v-spacer>
-      <v-responsive class="d-none d-sm-flex">
+
+      <v-spacer></v-spacer>
+      <v-text-field
+        dense
+        flat
+        hide-details
+        rounded
+        solo-inverted
+        append-icon="mdi-magnify"
+      ></v-text-field>
+      <v-btn icon @click="toggle_dark_mode">
+        <v-icon>mdi-theme-light-dark</v-icon>
+      </v-btn>
+      <v-app-bar-nav-icon @click.stop="drawer = !drawer"></v-app-bar-nav-icon> -->
+    </v-app-bar>
+
+    <v-navigation-drawer app fixed right clipped extended>
+      <v-list dense>
+        <v-list-tile>
+          <v-list-tile-content>
+            <v-list-tile-title>xcxcvxcvxvxvc</v-list-tile-title>
+          </v-list-tile-content>
+        </v-list-tile>
+        <v-list-tile>
+          <v-list-tile-content>
+            <v-list-tile-title>xcxcvxcvxvxvc</v-list-tile-title>
+          </v-list-tile-content>
+        </v-list-tile>
+        <v-list-tile>
+          <v-list-tile-content>
+            <v-list-tile-title>xcxcvxcvxvxvc</v-list-tile-title>
+          </v-list-tile-content>
+        </v-list-tile>
+        <v-list-tile>
+          <v-list-tile-content>
+            <v-list-tile-title>xcxcvxcvxvxvc</v-list-tile-title>
+          </v-list-tile-content>
+        </v-list-tile>
+        <v-list-tile>
+          <v-list-tile-content>
+            <v-list-tile-title>254545445</v-list-tile-title>
+          </v-list-tile-content>
+        </v-list-tile>
+      </v-list>
+    </v-navigation-drawer>
+
+    <v-main app>
+      <v-navigation-drawer app fixed clipped extended>
+        <v-list dense>
+          <v-list-tile>
+            <v-list-tile-content>
+              <v-list-tile-title>xcxcvxcvxvxvc</v-list-tile-title>
+            </v-list-tile-content>
+          </v-list-tile>
+          <v-list-tile>
+            <v-list-tile-content>
+              <v-list-tile-title>254545445</v-list-tile-title>
+            </v-list-tile-content>
+          </v-list-tile>
+        </v-list>
+      </v-navigation-drawer>
+      <v-responsive fill-height class="d-flex d-sm-none">
         <v-text-field
           dense
           flat
@@ -183,51 +167,29 @@
           solo-inverted
         ></v-text-field>
       </v-responsive>
-      <v-spacer></v-spacer>
-      <v-btn icon @click="toggle_dark_mode">
-        <v-icon>mdi-theme-light-dark</v-icon>
-      </v-btn>
-      <v-app-bar-nav-icon @click.stop="drawer = !drawer"></v-app-bar-nav-icon> -->
-    </v-app-bar>
-
-    <v-main>
-      <v-container fill-height>
-        <v-row justify="center">
-          <v-col cols="12" sm="2" class="hidden-sm-and-down">
-            <v-sheet min-height="100vh">
-              Lorem ipsum dolor sit, amet consectetur adipisicing elit. Natus,
-              quod.
-            </v-sheet>
-          </v-col>
-          <v-divider vertical class="hidden-sm-and-down"></v-divider>
-          <v-col cols="12" sm="5">
-            <v-responsive class="d-flex d-sm-none">
-              <v-text-field
-                dense
-                flat
-                hide-details
-                rounded
-                solo-inverted
-              ></v-text-field>
-            </v-responsive>
-
-            <v-sheet min-height="100vh">
-              <nuxt />
-            </v-sheet>
-          </v-col>
-          <v-divider vertical class="hidden-sm-and-down"></v-divider>
-          <v-col cols="12" sm="2" class="hidden-sm-and-down">
-            <v-sheet min-height="100vh">
-              Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eum ipsa
-              porro doloribus tempore optio dignissimos similique placeat, iusto
-              beatae facere!
-            </v-sheet>
-          </v-col>
-        </v-row>
-      </v-container>
     </v-main>
+    <v-footer app class="justify-center pl-0" inset>
+      <v-card class="flex" flat tile>
+        <v-card-title class="teal">
+          <strong class="subheading"
+            >Get connected with us on social networks!</strong
+          >
 
-    <v-footer tile padless class="mx-auto" color="transparent" max-width="500">
+          <v-spacer></v-spacer>
+
+          <v-btn v-for="icon in icons" :key="icon" class="mx-4" dark icon>
+            <v-icon size="24px">
+              {{ icon }}
+            </v-icon>
+          </v-btn>
+        </v-card-title>
+
+        <v-card-text class="py-2 white--text text-center">
+          {{ new Date().getFullYear() }} — <strong>Vuetify</strong>
+        </v-card-text>
+      </v-card>
+    </v-footer>
+    <!-- <v-footer app outlined absolute inset fixed>
       <v-card flat tile class="text-center" color="transparent">
         <v-card-text>
           <v-btn
@@ -252,7 +214,7 @@
           Copyright &copy; {{ new Date().getFullYear() }} {{ copyright }}
         </v-card-text>
       </v-card>
-    </v-footer>
+    </v-footer> -->
   </v-app>
 </template>
 
@@ -261,6 +223,48 @@ export default {
   data: () => ({
     drawer: false,
     links: ["Dashboard", "Messages", "Profile", "Updates"],
+    items: [
+      {
+        action: "mdi-ticket",
+        items: [{ title: "List Item" }],
+        title: "Attractions",
+      },
+      {
+        action: "mdi-silverware-fork-knife",
+        active: true,
+        items: [
+          { title: "Breakfast & brunch" },
+          { title: "New American" },
+          { title: "Sushi" },
+        ],
+        title: "Dining",
+      },
+      {
+        action: "mdi-school",
+        items: [{ title: "List Item" }],
+        title: "Education",
+      },
+      {
+        action: "mdi-run",
+        items: [{ title: "List Item" }],
+        title: "Family",
+      },
+      {
+        action: "mdi-bottle-tonic-plus",
+        items: [{ title: "List Item" }],
+        title: "Health",
+      },
+      {
+        action: "mdi-content-cut",
+        items: [{ title: "List Item" }],
+        title: "Office",
+      },
+      {
+        action: "mdi-tag",
+        items: [{ title: "List Item" }],
+        title: "Promotions",
+      },
+    ],
   }),
   mounted() {
     const theme = localStorage.getItem("dark_theme");
@@ -303,3 +307,11 @@ export default {
   },
 };
 </script>
+
+<style scoped>
+.fixed-bar {
+  position: sticky;
+  top: 6em;
+  z-index: 2;
+}
+</style>
