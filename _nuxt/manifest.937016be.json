@@ -1,0 +1,54 @@
+{
+  "name": "Windows сommand line interpreter helper",
+  "short_name": "Win CLI Helper",
+  "description": "Windows сommand line interpreter helper.",
+  "icons": [
+    {
+      "src": "/win-cli-helper/_nuxt/icons/icon_64x64.6d8650.png",
+      "sizes": "64x64",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/win-cli-helper/_nuxt/icons/icon_120x120.6d8650.png",
+      "sizes": "120x120",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/win-cli-helper/_nuxt/icons/icon_144x144.6d8650.png",
+      "sizes": "144x144",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/win-cli-helper/_nuxt/icons/icon_152x152.6d8650.png",
+      "sizes": "152x152",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/win-cli-helper/_nuxt/icons/icon_192x192.6d8650.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/win-cli-helper/_nuxt/icons/icon_384x384.6d8650.png",
+      "sizes": "384x384",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/win-cli-helper/_nuxt/icons/icon_512x512.6d8650.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ],
+  "start_url": "/win-cli-helper/",
+  "display": "standalone",
+  "background_color": "#fff",
+  "theme_color": "#fff",
+  "lang": "ru"
+}
