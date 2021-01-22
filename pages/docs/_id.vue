@@ -58,6 +58,7 @@ export default {
       ],
     };
   },
+
   methods: {
     formatDate(date) {
       const options = { year: "numeric", month: "long", day: "numeric" };

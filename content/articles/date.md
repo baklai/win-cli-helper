@@ -1,6 +1,11 @@
 ---
-title: Команды DATE и TIME
-description: Learning how to use @nuxt/content to create a blog
+title: Praesent sed neque efficitur
+description: Aliquam ultrices ex eget leo tincidunt
+date: 2020-10-10
+image: index.jpg
+tags:
+  - test
+  - another
 ---
 
 # Lorem ipsum
