@@ -3,10 +3,21 @@ title: Команды DATE и TIME
 description: Learning how to use @nuxt/content to create a blog
 ---
 
-Команды DATE и TIME
+# Lorem ipsum
+
+## dolor—sit—amet
+
+### consectetur &amp; adipisicing
+
+#### elit
+
+##### eli
+
+# Команды DATE и TIME
+
 DATE и TIME имеют сходный формат командной строки и используются для отображения или изменения текущей даты или времени.
 
-Формат командной строки DATE:
+### Формат командной строки DATE:
 
 ```bash
 DATE [/T | дата]

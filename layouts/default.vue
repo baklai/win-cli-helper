@@ -264,11 +264,3 @@ export default {
   },
 };
 </script>
-
-<style scoped>
-.fixed-bar {
-  position: sticky;
-  top: 6em;
-  z-index: 2;
-}
-</style>
