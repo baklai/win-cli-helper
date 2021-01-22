@@ -87,8 +87,8 @@
       </v-row>
     </v-app-bar> -->
 
-    <v-app-bar app fixed outlined flat clipped-left clipped-right>
-      <!-- <v-toolbar-title>
+    <v-app-bar app outlined flat clipped-left clipped-right>
+      <v-toolbar-title>
         <v-avatar left tile size="32">
           <img src="@/static/icon.png" alt="logo" />
         </v-avatar>
@@ -107,91 +107,55 @@
         solo-inverted
         append-icon="mdi-magnify"
       ></v-text-field>
+
       <v-btn icon @click="toggle_dark_mode">
         <v-icon>mdi-theme-light-dark</v-icon>
       </v-btn>
-      <v-app-bar-nav-icon @click.stop="drawer = !drawer"></v-app-bar-nav-icon> -->
+      <v-app-bar-nav-icon @click.stop="drawer = !drawer"></v-app-bar-nav-icon>
     </v-app-bar>
+    <v-main>
+      <v-container>
+        <v-row>
+          <v-col cols="12" sm="3" class="d-flex justify-start">
+            <v-sheet
+              color="white"
+              elevation="1"
+              width="100"
+              height="100"
+              style="position:fixed;"
+            ></v-sheet>
+          </v-col>
 
-    <v-navigation-drawer app fixed right clipped extended>
-      <v-list dense>
-        <v-list-tile>
-          <v-list-tile-content>
-            <v-list-tile-title>xcxcvxcvxvxvc</v-list-tile-title>
-          </v-list-tile-content>
-        </v-list-tile>
-        <v-list-tile>
-          <v-list-tile-content>
-            <v-list-tile-title>xcxcvxcvxvxvc</v-list-tile-title>
-          </v-list-tile-content>
-        </v-list-tile>
-        <v-list-tile>
-          <v-list-tile-content>
-            <v-list-tile-title>xcxcvxcvxvxvc</v-list-tile-title>
-          </v-list-tile-content>
-        </v-list-tile>
-        <v-list-tile>
-          <v-list-tile-content>
-            <v-list-tile-title>xcxcvxcvxvxvc</v-list-tile-title>
-          </v-list-tile-content>
-        </v-list-tile>
-        <v-list-tile>
-          <v-list-tile-content>
-            <v-list-tile-title>254545445</v-list-tile-title>
-          </v-list-tile-content>
-        </v-list-tile>
-      </v-list>
-    </v-navigation-drawer>
+          <v-divider vertical></v-divider>
 
-    <v-main app>
-      <v-navigation-drawer app fixed clipped extended>
-        <v-list dense>
-          <v-list-tile>
-            <v-list-tile-content>
-              <v-list-tile-title>xcxcvxcvxvxvc</v-list-tile-title>
-            </v-list-tile-content>
-          </v-list-tile>
-          <v-list-tile>
-            <v-list-tile-content>
-              <v-list-tile-title>254545445</v-list-tile-title>
-            </v-list-tile-content>
-          </v-list-tile>
-        </v-list>
-      </v-navigation-drawer>
-      <v-responsive fill-height class="d-flex d-sm-none">
-        <v-text-field
-          dense
-          flat
-          hide-details
-          rounded
-          solo-inverted
-        ></v-text-field>
-      </v-responsive>
-    </v-main>
-    <v-footer app class="justify-center pl-0" inset>
-      <v-card class="flex" flat tile>
-        <v-card-title class="teal">
-          <strong class="subheading"
-            >Get connected with us on social networks!</strong
+          <v-col
+            class="d-flex justify-space-around"
+            height="100vh"
+            align-self="center"
           >
+            <nuxt />
+          </v-col>
 
+          <v-divider vertical></v-divider>
+
+          <v-col cols="12" sm="3" class="d-flex justify-end">
+            <v-sheet
+              color="white"
+              elevation="1"
+              width="100"
+              height="100"
+              style="position:fixed;"
+            ></v-sheet>
+          </v-col>
+        </v-row>
+      </v-container>
+    </v-main>
+
+    <v-footer outlined padless>
+      <v-card class="flex" flat tile color="transparent">
+        <v-card-title>
+          Copyright &copy; {{ new Date().getFullYear() }} {{ copyright }}
           <v-spacer></v-spacer>
-
-          <v-btn v-for="icon in icons" :key="icon" class="mx-4" dark icon>
-            <v-icon size="24px">
-              {{ icon }}
-            </v-icon>
-          </v-btn>
-        </v-card-title>
-
-        <v-card-text class="py-2 white--text text-center">
-          {{ new Date().getFullYear() }} — <strong>Vuetify</strong>
-        </v-card-text>
-      </v-card>
-    </v-footer>
-    <!-- <v-footer app outlined absolute inset fixed>
-      <v-card flat tile class="text-center" color="transparent">
-        <v-card-text>
           <v-btn
             v-for="item in links"
             :key="item.icon"
@@ -204,17 +168,9 @@
               {{ item.icon }}
             </v-icon>
           </v-btn>
-        </v-card-text>
-        <v-card-text class="caption pt-0">
-          Данный онлайн сервис разработан специально для перевода строки текста
-          из русской раскладки в английскую.
-        </v-card-text>
-        <v-divider></v-divider>
-        <v-card-text>
-          Copyright &copy; {{ new Date().getFullYear() }} {{ copyright }}
-        </v-card-text>
+        </v-card-title>
       </v-card>
-    </v-footer> -->
+    </v-footer>
   </v-app>
 </template>
 
@@ -222,7 +178,8 @@
 export default {
   data: () => ({
     drawer: false,
-    links: ["Dashboard", "Messages", "Profile", "Updates"],
+    icons: ["mdi-facebook", "mdi-twitter", "mdi-linkedin", "mdi-instagram"],
+
     items: [
       {
         action: "mdi-ticket",
