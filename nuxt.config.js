@@ -43,6 +43,7 @@ export default {
   modules: ["@nuxtjs/pwa", "@nuxtjs/meta", "@nuxt/content"],
 
   content: {
+    dir: `/${process.env.npm_package_name}/content`,
     markdown: {
       prism: {
         theme: "prism-themes/themes/prism-ghcolors.css",
